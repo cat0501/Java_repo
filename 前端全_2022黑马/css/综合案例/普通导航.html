@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* a显示模式是行内，加宽高默认不生效，转显示模式才行：行内块 */
+        a {
+            width: 80px;
+            height: 50px;
+
+            /* 区分color和background-color： */
+            /* 背景颜色 */
+            background-color: #ff0000;
+            /* 文字颜色 */
+            color: #fff;
+            /* 水平居中 */
+            text-align: center;
+            /* 垂直居中 */
+            line-height: 50px;
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 为了让宽高生效，显示模式转为行内块 */
+            display: inline-block;
+        }
+        a:hover {
+            background-color: #ffa500;
+        }
+    </style>
+</head>
+<body>
+    <!-- a{导航$}*5 -->
+    <a href="#">导航1</a>
+    <a href="#">导航2</a>
+    <a href="#">导航3</a>
+    <a href="#">导航4</a>
+    <a href="#">导航5</a>
+</body>
+</html>

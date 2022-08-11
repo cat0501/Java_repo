@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>青春不常在，抓紧谈恋爱</h1>
+    <hr>
+    <form action="">
+        <p>
+            昵称：<input type="text" placeholder="请输入昵称">
+        </p>
+        <p>
+            性别：
+            <!-- label点击文字也可以选中 -->
+            <label><input type="radio" name="性别">男</label>
+            <label><input type="radio" name="性别" checked>女</label>
+            <!-- <input type="radio" name="性别">男
+            <input type="radio" name="性别">女 -->
+        </p>
+        <p>
+            所在城市：
+            <select>
+                <option>上海</option>
+                <option>北京</option>
+                <option selected>武汉</option>
+            </select>
+        </p>
+        <p>
+            婚姻状况：
+            <input type="radio" name="婚姻状况">未婚
+            <input type="radio" name="婚姻状况">已婚
+            <input type="radio" name="婚姻状况">保密
+        </p>
+        <p>
+            喜欢的类型：
+            <input type="checkbox" name="类型" checked>可爱
+            <input type="checkbox" name="类型" checked>性感
+            <input type="checkbox" name="类型">御姐
+            <input type="checkbox" name="类型">萝莉
+        </p>
+        <p>
+            个人介绍：
+        </p>
+        <p>
+            <textarea cols="100" rows="10">
+            </textarea>
+        </p>
+        <h3>我承诺</h3  >
+        <ul>
+            <li>年满18、单身</li>
+            <li>抱着严肃的态度</li>
+            <li>真诚寻找另一半</li>
+        </ul>
+        <input type="checkbox" name="我同意">我同意所有条款
+        <!-- 按钮：input、button -->
+        <p>
+            <input type="submit" value="免费注册"> 
+            <input type="reset" value="重置">
+            <button type="reset">重置</button>
+        </p>
+    </form>
+</body>
+</html>

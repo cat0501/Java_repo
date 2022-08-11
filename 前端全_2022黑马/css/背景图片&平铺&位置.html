@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            /* 不设置background-repeat的话，默认水平和垂直方向都平铺，所以会显示4张 */
+            background-image: url(./images/1.jpg);
+            /* 背景平铺：no-repeat 不平铺，显示1张 */
+            background-repeat: no-repeat;
+            /* 背景位置 */
+            /* 左上角 */
+            /* background-position: 0 0; */
+            /* 右上角 */
+            /* background-position: right 0; */
+            /* 右下角 */
+            /* background-position: right bottom; */
+            /* 居中 */
+            background-position: center center;
+            background-position: 50px 0;
+            
+            /* 正数：向右向下移动    负数：向左向上移动 */
+            /* 背景色和背景图只显示在盒子里面 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

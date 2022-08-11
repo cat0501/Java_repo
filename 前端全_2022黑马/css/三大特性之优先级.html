@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择器优先级 */
+        /* id选择器 */
+        #id {
+            color: blueviolet;
+        }
+        /* 类选择器 */
+        .box {
+            color: yellow;
+        }
+        /* 标签选择器 */
+        /* 优先级提升到最高 */
+        div {
+            color: green !important;
+        }
+        /* 继承 */
+        body {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 优先级意义：当一个标签使用了多个选择器，样式冲突的时候，到底谁生效 -->
+    <!-- 行内样式 -->
+    <div class="box" id="id" style="color: pink;">测试优先级</div>
+</body>
+</html>
