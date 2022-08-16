@@ -9,14 +9,17 @@
         <version>2.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.itheima</groupId>
     <artifactId>aspectj_01</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>aspectj_01</name>
     <description>aspectj_01</description>
+
     <properties>
         <java.version>8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -100,9 +100,9 @@ public class WebConfig {
             public void render(Map<String, ?> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
                 System.out.println(model);
                 response.setContentType("text/html;charset=utf-8");
-                response.getWriter().print("""
-                        <h3>服务器内部错误</h3>
-                        """);
+                //response.getWriter().print("""
+                //        <h3>服务器内部错误</h3>
+                //        """);
             }
         };
     }

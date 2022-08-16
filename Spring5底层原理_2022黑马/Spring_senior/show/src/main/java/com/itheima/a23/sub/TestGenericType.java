@@ -14,9 +14,9 @@ public class TestGenericType {
         Type type = TeacherDao.class.getGenericSuperclass();
         System.out.println(type);
 
-        if (type instanceof ParameterizedType parameterizedType) {
-            System.out.println(parameterizedType.getActualTypeArguments()[0]);
-        }
+        //if (type instanceof ParameterizedType parameterizedType) {
+        //    System.out.println(parameterizedType.getActualTypeArguments()[0]);
+        //}
 
         // 2. spring api 1
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>");

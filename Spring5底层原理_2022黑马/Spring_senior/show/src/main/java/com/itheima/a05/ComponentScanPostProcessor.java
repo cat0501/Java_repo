@@ -44,6 +44,7 @@ public class ComponentScanPostProcessor implements BeanDefinitionRegistryPostPro
                         AnnotationMetadata annotationMetadata = reader.getAnnotationMetadata();
                         // System.out.println("是否加了 @Component:" + annotationMetadata.hasAnnotation(Component.class.getName()));
                         // System.out.println("是否加了 @Component 派生:" + annotationMetadata.hasMetaAnnotation(Component.class.getName()));
+                        
                         if (annotationMetadata.hasAnnotation(Component.class.getName())
                             || annotationMetadata.hasMetaAnnotation(Component.class.getName())) {
                             AbstractBeanDefinition bd = BeanDefinitionBuilder

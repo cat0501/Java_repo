@@ -14,8 +14,8 @@ public class JdkProxyDemo {
         }
     }
 
-    // jdk 只能针对接口代理
-    // cglib
+    // jdk（jdk自带的）只能针对接口代理
+    // cglib（第三方）
     public static void main(String[] param) throws IOException {
         // 目标对象
         Target target = new Target();

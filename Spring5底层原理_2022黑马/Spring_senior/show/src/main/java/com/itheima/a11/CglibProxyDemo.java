@@ -17,7 +17,7 @@ public class CglibProxyDemo {
 
     // 代理是子类型, 目标是父类型
     public static void main(String[] param) {
-//        Target target = new Target();
+        //Target target = new Target();
 
         Target proxy = (Target) Enhancer.create(Target.class, (MethodInterceptor) (p, method, args, methodProxy) -> {
             System.out.println("before...");

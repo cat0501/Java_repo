@@ -1,7 +1,11 @@
 package com.itheima.a05;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.itheima.a05.mapper.Mapper1;
+import com.itheima.a05.mapper.Mapper2;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -32,17 +36,18 @@ public class Config {
         return dataSource;
     }
 
-    /*@Bean
-    public MapperFactoryBean<Mapper1> mapper1(SqlSessionFactory sqlSessionFactory) {
-        MapperFactoryBean<Mapper1> factory = new MapperFactoryBean<>(Mapper1.class);
-        factory.setSqlSessionFactory(sqlSessionFactory);
-        return factory;
-    }
-
-    @Bean
-    public MapperFactoryBean<Mapper2> mapper2(SqlSessionFactory sqlSessionFactory) {
-        MapperFactoryBean<Mapper2> factory = new MapperFactoryBean<>(Mapper2.class);
-        factory.setSqlSessionFactory(sqlSessionFactory);
-        return factory;
-    }*/
+    //// 生产mapper对象的工厂
+    //@Bean
+    //public MapperFactoryBean<Mapper1> mapper1(SqlSessionFactory sqlSessionFactory) {
+    //    MapperFactoryBean<Mapper1> factory = new MapperFactoryBean<>(Mapper1.class);
+    //    factory.setSqlSessionFactory(sqlSessionFactory);
+    //    return factory;
+    //}
+    //
+    //@Bean
+    //public MapperFactoryBean<Mapper2> mapper2(SqlSessionFactory sqlSessionFactory) {
+    //    MapperFactoryBean<Mapper2> factory = new MapperFactoryBean<>(Mapper2.class);
+    //    factory.setSqlSessionFactory(sqlSessionFactory);
+    //    return factory;
+    //}
 }

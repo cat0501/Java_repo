@@ -26,7 +26,7 @@ public class A10 {
         log.debug("service class: {}", service.getClass());
         service.foo();
 
-//        context.close();
+        // context.close();
 
         /*
             学到了什么

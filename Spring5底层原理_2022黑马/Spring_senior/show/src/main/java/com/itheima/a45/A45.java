@@ -7,7 +7,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import java.lang.reflect.Method;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class A45 {
 
     public static void main(String[] args) throws Exception {
@@ -48,12 +48,12 @@ public class A45 {
         System.out.println("\tinitialized=" + proxy.initialized);
         System.out.println("\tbean2=" + proxy.bean2);
 
-        if (proxy instanceof Advised advised) {
-            System.out.println(">>>>> 目标中的成员变量");
-            Bean1 target = (Bean1) advised.getTargetSource().getTarget();
-            System.out.println("\tinitialized=" + target.initialized);
-            System.out.println("\tbean2=" + target.bean2);
-        }
+        //if (proxy instanceof Advised advised) {
+        //    System.out.println(">>>>> 目标中的成员变量");
+        //    Bean1 target = (Bean1) advised.getTargetSource().getTarget();
+        //    System.out.println("\tinitialized=" + target.initialized);
+        //    System.out.println("\tbean2=" + target.bean2);
+        //}
     }
 
 }

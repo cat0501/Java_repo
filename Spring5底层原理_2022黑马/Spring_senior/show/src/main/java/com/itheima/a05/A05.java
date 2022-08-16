@@ -2,8 +2,10 @@ package com.itheima.a05;
 
 import com.itheima.a05.mapper.Mapper1;
 import com.itheima.a05.mapper.Mapper2;
+import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.ConfigurationClassPostProcessor;
 import org.springframework.context.support.GenericApplicationContext;
 
 import java.io.IOException;
@@ -19,15 +21,15 @@ public class A05 {
         // ⬇️GenericApplicationContext 是一个【干净】的容器
         GenericApplicationContext context = new GenericApplicationContext();
         context.registerBean("config", Config.class);
-//        context.registerBean(ConfigurationClassPostProcessor.class); // @ComponentScan @Bean @Import @ImportResource
-//        context.registerBean(MapperScannerConfigurer.class, bd -> { // @MapperScanner
-//            bd.getPropertyValues().add("basePackage", "com.itheima.a05.mapper");
-//        });
+        context.registerBean(ConfigurationClassPostProcessor.class); // @ComponentScan @Bean @Import @ImportResource
+        context.registerBean(MapperScannerConfigurer.class, bd -> { // @MapperScanner
+            bd.getPropertyValues().add("basePackage", "com.itheima.a05.mapper");
+        });
 
 //        context.registerBean(ComponentScanPostProcessor.class); // 解析 @ComponentScan
 
-        context.registerBean(AtBeanPostProcessor.class); // 解析 @Bean
-        context.registerBean(MapperPostProcessor.class); // 解析 Mapper 接口
+        //context.registerBean(AtBeanPostProcessor.class); // 解析 @Bean
+        //context.registerBean(MapperPostProcessor.class); // 解析 Mapper 接口
 
         // ⬇️初始化容器
         context.refresh();

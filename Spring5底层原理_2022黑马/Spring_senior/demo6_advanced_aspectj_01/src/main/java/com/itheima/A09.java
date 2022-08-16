@@ -3,7 +3,9 @@ package com.itheima;
 import com.itheima.service.MyService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /*
     注意几点
@@ -16,15 +18,15 @@ public class A09 {
     private static final Logger log = LoggerFactory.getLogger(A09.class);
 
     public static void main(String[] args) {
-//        ConfigurableApplicationContext context = SpringApplication.run(A10Application.class, args);
-//        MyService service = context.getBean(MyService.class);
-//
-//        log.debug("service class: {}", service.getClass());
-//        service.foo();
-//
-//        context.close();
+        ConfigurableApplicationContext context = SpringApplication.run(A09.class, args);
+        MyService service = context.getBean(MyService.class);
 
-        new MyService().foo();
+        log.debug("service class: {}", service.getClass());
+        service.foo();
+
+        context.close();
+
+        //new MyService().foo();
 
         /*
             学到了什么

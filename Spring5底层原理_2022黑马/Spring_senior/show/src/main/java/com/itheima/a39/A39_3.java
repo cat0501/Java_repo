@@ -33,7 +33,9 @@ public class A39_3 {
         DefaultApplicationArguments arguments = new DefaultApplicationArguments(args);
 
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>> 8. 创建容器");
-        GenericApplicationContext context = createApplicationContext(WebApplicationType.SERVLET);
+        //GenericApplicationContext context = createApplicationContext(WebApplicationType.SERVLET);
+        // 暂时解决报错
+        GenericApplicationContext context = new GenericApplicationContext();
 
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>> 9. 准备容器");
         for (ApplicationContextInitializer initializer : app.getInitializers()) {
@@ -73,15 +75,15 @@ public class A39_3 {
          */
     }
 
-    private static GenericApplicationContext createApplicationContext(WebApplicationType type) {
-        GenericApplicationContext context = null;
-        switch (type) {
-            case SERVLET -> context = new AnnotationConfigServletWebServerApplicationContext();
-            case REACTIVE -> context = new AnnotationConfigReactiveWebServerApplicationContext();
-            case NONE -> context = new AnnotationConfigApplicationContext();
-        }
-        return context;
-    }
+    //private static GenericApplicationContext createApplicationContext(WebApplicationType type) {
+    //    GenericApplicationContext context = null;
+    //    switch (type) {
+    //        case SERVLET -> context = new AnnotationConfigServletWebServerApplicationContext();
+    //        case REACTIVE -> context = new AnnotationConfigReactiveWebServerApplicationContext();
+    //        case NONE -> context = new AnnotationConfigApplicationContext();
+    //    }
+    //    return context;
+    //}
 
     static class Bean4 {
 

@@ -70,9 +70,9 @@ public class WebConfig_1 {
 
         @Override
         public ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-            if (handler instanceof Controller controller) {
-                controller.handleRequest(request, response);
-            }
+            //if (handler instanceof Controller controller) {
+            //    controller.handleRequest(request, response);
+            //}
             return null;
         }
 

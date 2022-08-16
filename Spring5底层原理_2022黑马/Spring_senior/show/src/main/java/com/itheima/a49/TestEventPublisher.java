@@ -40,9 +40,9 @@ public class TestEventPublisher {
             listeners.add(new GenericApplicationListener() {
                 @Override
                 public void onApplicationEvent(ApplicationEvent event) {
-                    if (event instanceof PayloadApplicationEvent payloadApplicationEvent) {
-                        System.out.println(payloadApplicationEvent.getPayload());
-                    }
+                    //if (event instanceof PayloadApplicationEvent payloadApplicationEvent) {
+                    //    System.out.println(payloadApplicationEvent.getPayload());
+                    //}
                 }
 
                 @Override
@@ -101,9 +101,9 @@ public class TestEventPublisher {
                         if (eventType == null) {
                             return false;
                         }
-                        if (applicationListener instanceof GenericApplicationListener genericApplicationListener) {
-                            return genericApplicationListener.supportsEventType(eventType);
-                        }
+                        //if (applicationListener instanceof GenericApplicationListener genericApplicationListener) {
+                        //    return genericApplicationListener.supportsEventType(eventType);
+                        //}
                         return false;
                     })
                     .forEach(applicationListener -> {

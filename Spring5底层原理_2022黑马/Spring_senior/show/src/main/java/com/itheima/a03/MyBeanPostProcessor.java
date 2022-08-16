@@ -35,6 +35,7 @@ public class MyBeanPostProcessor implements InstantiationAwareBeanPostProcessor,
         return true;
     }
 
+    // 重点⭐️
     @Override
     public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) throws BeansException {
         if (beanName.equals("lifeCycleBean"))

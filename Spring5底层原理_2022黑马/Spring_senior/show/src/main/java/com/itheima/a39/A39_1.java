@@ -28,9 +28,9 @@ public class A39_1 {
         System.out.println("\t应用类型为:"+deduceFromClasspath.invoke(null));
         System.out.println("3. 演示 ApplicationContext 初始化器");
         spring.addInitializers(applicationContext -> {
-            if (applicationContext instanceof GenericApplicationContext gac) {
-                gac.registerBean("bean3", Bean3.class);
-            }
+            //if (applicationContext instanceof GenericApplicationContext gac) {
+            //    gac.registerBean("bean3", Bean3.class);
+            //}
         });
         System.out.println("4. 演示监听器与事件");
         spring.addListeners(event -> System.out.println("\t事件为:" + event.getClass()));

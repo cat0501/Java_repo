@@ -18,7 +18,7 @@ public class LifeCycleBean {
     }
 
     @Autowired
-    public void autowire(@Value("${JAVA_HOME}") String home) {
+    public void autowire(@Value("${spring.datasource.url}") String home) {
         log.debug("依赖注入: {}", home);
     }
 

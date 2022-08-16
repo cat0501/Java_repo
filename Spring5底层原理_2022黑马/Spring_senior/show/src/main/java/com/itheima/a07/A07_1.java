@@ -26,8 +26,8 @@ public class A07_1 {
         return new Bean1();
     }
 
-    @Bean(destroyMethod = "destroy3")
-    public Bean2 bean2() {
-        return new Bean2();
-    }
+    //@Bean(destroyMethod = "destroy3")
+    //public Bean2 bean2() {
+    //    return new Bean2();
+    //}
 }

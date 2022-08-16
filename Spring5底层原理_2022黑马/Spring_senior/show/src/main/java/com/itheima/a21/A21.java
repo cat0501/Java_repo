@@ -134,12 +134,12 @@ public class A21 {
         request.setCookies(new Cookie("token", "123456"));
         request.setParameter("name", "张三");
         request.setParameter("age", "18");
-        request.setContent("""
-                    {
-                        "name":"李四",
-                        "age":20
-                    }
-                """.getBytes(StandardCharsets.UTF_8));
+        //request.setContent("""
+        //            {
+        //                "name":"李四",
+        //                "age":20
+        //            }
+        //        """.getBytes(StandardCharsets.UTF_8));
 
         return new StandardServletMultipartResolver().resolveMultipart(request);
     }

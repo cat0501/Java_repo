@@ -22,16 +22,16 @@ public class A04 {
         context.registerBean("bean4", Bean4.class);
 
         context.getDefaultListableBeanFactory().setAutowireCandidateResolver(new ContextAnnotationAutowireCandidateResolver());
-        context.registerBean(AutowiredAnnotationBeanPostProcessor.class); // @Autowired @Value
+        context.registerBean(AutowiredAnnotationBeanPostProcessor.class); // 解析@Autowired @Value 的bean后处理器
 
         context.registerBean(CommonAnnotationBeanPostProcessor.class); // @Resource @PostConstruct @PreDestroy
 
-        ConfigurationPropertiesBindingPostProcessor.register(context.getDefaultListableBeanFactory());
+        ConfigurationPropertiesBindingPostProcessor.register(context.getDefaultListableBeanFactory());// 初始化前进行属性绑定
 
         // ⬇️初始化容器
         context.refresh(); // 执行beanFactory后处理器, 添加bean后处理器, 初始化所有单例
 
-        System.out.println(context.getBean(Bean1.class));
+        System.out.println(context.getBean(Bean4.class));
 
         // ⬇️销毁容器
         context.close();
