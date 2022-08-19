@@ -2,12 +2,12 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
+      url: jdbc:mysql://localhost:3306/newbee_mall_db_v2?serverTimezone=UTC
       username: root
-      password: root
-#  elasticsearch:
-#    rest:
-#      uris: http://localhost:9200
+      password: 123456
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
 
 mybatis-plus:
   global-config:

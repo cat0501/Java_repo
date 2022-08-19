@@ -1,5 +1,7 @@
 package com.itheima.a11;
 import java.io.IOException;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class JdkProxyDemo {

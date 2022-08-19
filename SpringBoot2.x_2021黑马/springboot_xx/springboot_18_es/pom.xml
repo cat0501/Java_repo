@@ -17,21 +17,38 @@
     </properties>
 
     <dependencies>
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>-->
-<!--        </dependency>-->
-
+        <!-- __________________________________elasticsearch相关的坐标__________________________________ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <!--SpringBoot平台并没有跟随ES的更新速度进行同步更新，ES提供了High Level Client操作ES-->
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
         </dependency>
 
         <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--    <groupId>org.springframework.data</groupId>-->
+        <!--    <artifactId>spring-data-elasticsearch</artifactId>-->
+        <!--</dependency>-->
+
+
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.78</version>
+        </dependency>
+
+        <!-- __________________________________web、test、mybatis、mybatis-plus、druid、mysql、lombok__________________________________ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -43,13 +60,19 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.3</version>
+            <version>3.4.3.4</version>
         </dependency>
+
+        <!--<dependency>-->
+        <!--    <groupId>org.mybatis.spring.boot</groupId>-->
+        <!--    <artifactId>mybatis-spring-boot-starter</artifactId>-->
+        <!--    <version>1.3.2</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.2.6</version>
+            <version>1.2.8</version>
         </dependency>
 
         <dependency>

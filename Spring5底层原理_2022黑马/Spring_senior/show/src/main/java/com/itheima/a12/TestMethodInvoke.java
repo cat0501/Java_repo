@@ -18,6 +18,7 @@ public class TestMethodInvoke {
     private static void show(int i, Method foo) throws Exception {
         Method getMethodAccessor = Method.class.getDeclaredMethod("getMethodAccessor");
         getMethodAccessor.setAccessible(true);
+
         Object invoke = getMethodAccessor.invoke(foo);
         if (invoke == null) {
             System.out.println(i + ":" + null);
