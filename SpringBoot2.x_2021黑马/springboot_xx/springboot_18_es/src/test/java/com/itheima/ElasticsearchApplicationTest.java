@@ -11,15 +11,20 @@ import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
+
 import org.elasticsearch.client.RequestOptions;
+import org.elasticsearch.client.Requests;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.client.indices.GetIndexRequest;
 import org.elasticsearch.client.indices.GetIndexResponse;
+
 import org.elasticsearch.index.query.Operator;
 import org.elasticsearch.index.query.QueryBuilders;
+
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -88,22 +93,25 @@ public class ElasticsearchApplicationTest {
     // 模糊查询
     @Test
     public void testClientSearch() throws IOException {
-        // 1、创建查询request
-        SearchRequest request = new SearchRequest("officialinfo");
+        // 1、创建查询 request
+        SearchRequest request = Requests.searchRequest("officialinfo");
+        //SearchRequest request = new SearchRequest("officialinfo");
+
         // 这个request.type() 可能因为 Elasticsearch 版本的问题，已经不用了，如果用的话，会报错
         // 【[types removal] Specifying types in search requests is deprecated."]】
         // request.types("text");
 
-        // 2、指定查询条件
+        // 2、构建查询条件并设置到 request
         SearchSourceBuilder builder = new SearchSourceBuilder();
         // 选择模糊查询匹配的模式是 and 还是 or
         // 也可以不加后面的 .operator(Operator.OR) ，如果不加，就是直接匹配
         builder.query(QueryBuilders.matchQuery("categoryRank","0").operator(Operator.OR));
+
         request.source(builder);
         // 3、执行查询
         SearchResponse response = client.search(request,RequestOptions.DEFAULT);
 
-        // 结果打印【为什么用 Hit ，需要去看 Elasticsearch 查询的结果，看结果很容易就明白了】
+        // 4、结果打印【为什么用 Hit ，需要去看 Elasticsearch 查询的结果，看结果很容易就明白了】
         SearchHit[] hits = response.getHits().getHits();
         System.out.println("------------------------------hit--------------------------------");
         for (SearchHit hit : hits) {

@@ -35,7 +35,8 @@ public class ElasticsearchImpl {
         List<GoodsCategory> categoryList = pogOfficialInfoMapper.selectList(null);
 
         // 调用高层对象
-        // ElasticSearchClientConfig 为之前写的 Elasticsearch 配置类，restHighLevelClient 是其中的静态方法
+        // ElasticSearchClientConfig 为之前写的 Elasticsearch 配置类，
+        // restHighLevelClient() 是其中的静态方法
         RestHighLevelClient client = ElasticSearchClientConfig.restHighLevelClient();
 
         // 存储刚刚 categoryList 里获得的数据
