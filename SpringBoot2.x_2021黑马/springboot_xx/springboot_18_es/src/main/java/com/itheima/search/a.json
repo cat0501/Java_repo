@@ -1,0 +1,79 @@
+{
+  "took" : 108,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 3,
+      "relation" : "eq"
+    },
+    "max_score" : 1.8339733,
+    "hits" : [
+      {
+        "_index" : "index_user",
+        "_type" : "_doc",
+        "_id" : "3",
+        "_score" : 1.8339733,
+        "_source" : {
+          "user_id" : "3",
+          "name" : "迪士尼在逃仙柔",
+          "login_name" : "dsnzxr",
+          "age" : 10,
+          "birthday" : "2011-06-22",
+          "desc" : "我是一名五年级的小学生，每天专车接专车送，中午在学校入伙，食堂菜可好了，上学期期末考试我拿了三好学生奖",
+          "head_url" : "https://www.zhuifengren.cn/img/dsnzxr.jpg"
+        },
+        "highlight" : {
+          "desc" : [
+            "我是<span>一名</span>五年级的<span>小学生</span>，每天专车接专车送，中午在学校入伙，食堂菜可好了，上学期期末考试我拿了三好<span>学生</span>奖"
+          ]
+        }
+      },
+      {
+        "_index" : "index_user",
+        "_type" : "_doc",
+        "_id" : "1",
+        "_score" : 1.1866885,
+        "_source" : {
+          "user_id" : "1",
+          "name" : "僵尸猎手",
+          "login_name" : "jsls",
+          "age" : 25,
+          "birthday" : "1990-03-01",
+          "desc" : "我是一名房产经纪人，现在转行了，目前是一名运输工人",
+          "head_url" : "https://www.zhuifengren.cn/img/jsls.jpg"
+        },
+        "highlight" : {
+          "desc" : [
+            "我是<span>一名</span>房产经纪人，现在转行了，目前是<span>一名</span>运输工人"
+          ]
+        }
+      },
+      {
+        "_index" : "index_user",
+        "_type" : "_doc",
+        "_id" : "2",
+        "_score" : 0.8630463,
+        "_source" : {
+          "user_id" : "2",
+          "name" : "夏维尔",
+          "login_name" : "xwe",
+          "age" : 28,
+          "birthday" : "1992-06-06",
+          "desc" : "我是一名高级开发经理，每天坐地铁上班，在北京住，从不堵车",
+          "head_url" : "https://www.zhuifengren.cn/img/xwe.jpg"
+        },
+        "highlight" : {
+          "desc" : [
+            "我是<span>一名</span>高级开发经理，每天坐地铁上班，在北京住，从不堵车"
+          ]
+        }
+      }
+    ]
+  }
+}

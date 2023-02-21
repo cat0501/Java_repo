@@ -35,6 +35,7 @@
         <!--    <artifactId>elasticsearch</artifactId>-->
         <!--</dependency>-->
         <!--spring-boot-starter-data-elasticsearch 已经包含了这个坐标-->
+
         <!--<dependency>-->
         <!--    <groupId>org.springframework.data</groupId>-->
         <!--    <artifactId>spring-data-elasticsearch</artifactId>-->
